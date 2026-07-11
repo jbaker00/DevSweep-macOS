@@ -22,8 +22,15 @@ targets:
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
         INFOPLIST_KEY_NSHumanReadableCopyright: ""
         CODE_SIGN_STYLE: Manual
-        CODE_SIGN_IDENTITY: "-"
         ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: YES
         SWIFT_STRICT_CONCURRENCY: minimal
         MARKETING_VERSION: "0.1"
         CURRENT_PROJECT_VERSION: "1"
+      configs:
+        Debug:
+          CODE_SIGN_IDENTITY: "-"
+        Release:
+          CODE_SIGN_IDENTITY: "Developer ID Application"
+          DEVELOPMENT_TEAM: G3P9A8Z2NP
+          OTHER_CODE_SIGN_FLAGS: "--timestamp --options runtime"

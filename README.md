@@ -17,6 +17,13 @@ DeviceSupport symbols; DevSweep does.
 | npm / SwiftPM / pip / CocoaPods / Gradle / Playwright / Homebrew | yes | re-downloaded on demand |
 | Hugging Face / Ollama models | **no** | slow to re-download |
 
+## Install
+
+Download the latest `DevSweep-x.y.dmg` from
+[Releases](https://github.com/jbaker00/DevSweep-macOS/releases), open it, and
+drag DevSweep to Applications. The app is signed and notarized. Free, MIT
+licensed. Requires macOS 14+.
+
 ## Build & run
 
 ```sh
@@ -36,6 +43,13 @@ Disk Access in System Settings → Privacy & Security.
 
 Deletions are permanent (`FileManager.removeItem`), guarded by a confirmation
 dialog.
+
+## Releasing
+
+`scripts/release.sh` archives a Release build, notarizes the app, packages a
+signed + notarized DMG into `build/`, and with `--publish` creates a GitHub
+release. Needs a "Developer ID Application" certificate and an App Store
+Connect API key.
 
 ## Roadmap
 
