@@ -19,7 +19,11 @@ DeviceSupport symbols; DevSweep does.
 
 ## Install
 
-Download the latest `DevSweep-x.y.dmg` from
+```sh
+brew install --cask jbaker00/tap/devsweep
+```
+
+Or download the latest `DevSweep-x.y.dmg` from
 [Releases](https://github.com/jbaker00/DevSweep-macOS/releases), open it, and
 drag DevSweep to Applications. The app is signed and notarized. Free, MIT
 licensed. Requires macOS 14+.

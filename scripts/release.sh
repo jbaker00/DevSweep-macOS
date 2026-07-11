@@ -65,4 +65,17 @@ if [[ "${1:-}" == "--publish" ]]; then
     gh release create "v$VERSION" "$DMG" \
         --title "$APP_NAME $VERSION" \
         --generate-notes
+
+    TAP_DIR="$HOME/code/homebrew-tap"
+    if [[ -d "$TAP_DIR" ]]; then
+        echo "==> Updating Homebrew cask"
+        SHA=$(shasum -a 256 "$DMG" | cut -d' ' -f1)
+        sed -i '' \
+            -e "s/^  version .*/  version \"$VERSION\"/" \
+            -e "s/^  sha256 .*/  sha256 \"$SHA\"/" \
+            "$TAP_DIR/Casks/devsweep.rb"
+        git -C "$TAP_DIR" add Casks/devsweep.rb
+        git -C "$TAP_DIR" commit -m "devsweep $VERSION"
+        git -C "$TAP_DIR" push
+    fi
 fi
