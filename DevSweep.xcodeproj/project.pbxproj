@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C92773237239DB5C29130E5 /* CacheModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721156D74CB06B61601CD399 /* CacheModels.swift */; };
 		4034D4238E7E920EFDD45BF1 /* DevSweepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4749C96D4616656F0090F /* DevSweepApp.swift */; };
+		A36BA25261AD567FB95FDBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAE7A5C45C104BD9752171B /* Assets.xcassets */; };
 		ACC2909D4622BCECF459F19F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91041D6C618826530108CF8E /* ContentView.swift */; };
 		CDF8479F6B91E453A7B9B6DE /* CacheScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104FE6519DBB08CDD551F19 /* CacheScanner.swift */; };
 		EFA2B6A708BC9C0EC57AF298 /* SweepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F7156AED18934E6470EC2A /* SweepModel.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		0CD4749C96D4616656F0090F /* DevSweepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevSweepApp.swift; sourceTree = "<group>"; };
+		0EAE7A5C45C104BD9752171B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		721156D74CB06B61601CD399 /* CacheModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheModels.swift; sourceTree = "<group>"; };
 		91041D6C618826530108CF8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B104FE6519DBB08CDD551F19 /* CacheScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheScanner.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		2FB8C2028C91808065AFDC33 /* DevSweep */ = {
 			isa = PBXGroup;
 			children = (
+				0EAE7A5C45C104BD9752171B /* Assets.xcassets */,
 				0CD4749C96D4616656F0090F /* DevSweepApp.swift */,
 				C14180246B176CFE748DBE55 /* Models */,
 				8E08EC2D16FA298DB40EB4F9 /* Scanner */,
@@ -92,6 +95,7 @@
 			buildConfigurationList = 550592A64CA30163975572B8 /* Build configuration list for PBXNativeTarget "DevSweep" */;
 			buildPhases = (
 				583E7FA0B222E1C24EFA69CC /* Sources */,
+				DE89910F71764BD30A2EF882 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +141,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DE89910F71764BD30A2EF882 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A36BA25261AD567FB95FDBB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		583E7FA0B222E1C24EFA69CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -171,7 +186,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp --options runtime";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbaker.DevSweep;
 				SDKROOT = macosx;
@@ -252,7 +267,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbaker.DevSweep;
 				SDKROOT = macosx;
 				SWIFT_STRICT_CONCURRENCY = minimal;
